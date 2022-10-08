@@ -8,12 +8,10 @@ import Menu from '@mui/material/Menu';
 import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import Logo from './Logo.png';
+import { useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 const pages = ['Team Stats', 'Individual Stats', 'Charting'];
@@ -21,6 +19,7 @@ const settings = ['Dark Mode', 'Light Mode'];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -28,6 +27,18 @@ const ResponsiveAppBar = () => {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+
+  const GoHome = () => {
+    navigate('/');
+  };
+
+  const GoIndividual = () => {
+    navigate('/individual');
+  };
+
+  const GoCharting = () => {
+    navigate('/charting');
   };
 
   return (
@@ -83,11 +94,7 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem>Team Stats</MenuItem>
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -110,15 +117,15 @@ const ResponsiveAppBar = () => {
             Chelsea Stats FC
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+            <MenuItem onClick={GoHome}>
+                Team Stats
+            </MenuItem>
+            <MenuItem onClick={GoIndividual}>
+                Individual Stats
+            </MenuItem>
+            <MenuItem onClick={GoCharting}>
+                Charting
+            </MenuItem>
           </Box>
         </Toolbar>
       </Container>
