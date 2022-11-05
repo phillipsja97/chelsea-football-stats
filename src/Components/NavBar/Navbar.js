@@ -43,7 +43,7 @@ const ResponsiveAppBar = () => {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="x4">
+      <Container maxWidth="x4" sx={{ backgroundColor: "#ff8200"}}>
         <Toolbar disableGutters>
           <SportsSoccerIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
@@ -57,12 +57,12 @@ const ResponsiveAppBar = () => {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'black',
               textDecoration: 'none',
               justifyContent: 'flex-start'
             }}
           >
-            Chelsea Stats FC
+            Tennessee Vols Stats
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -91,7 +91,7 @@ const ResponsiveAppBar = () => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: 'block', md: 'none'},
               }}
             >
               <MenuItem>Team Stats</MenuItem>
@@ -110,13 +110,13 @@ const ResponsiveAppBar = () => {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: '#ff8200',
               textDecoration: 'none',
             }}
           >
             Chelsea Stats FC
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, backgroundColor: "#ff8200", color: "black"}}>
             <MenuItem onClick={GoHome}>
                 Team Stats
             </MenuItem>

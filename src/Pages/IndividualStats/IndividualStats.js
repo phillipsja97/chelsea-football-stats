@@ -1,5 +1,7 @@
+import './IndividualStats.css'
+
 export default function IndividualStats() {
     return (
-        <h1>Individual Stats</h1>
+        <h1 className="individualStats">Individual Stats</h1>
     )
 }

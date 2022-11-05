@@ -1,5 +1,7 @@
+import './Charting.css'
+
 export default function Charting() {
     return (
-        <h1>Charting</h1>
+        <h1 className="charting">Charting</h1>
     )
 }

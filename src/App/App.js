@@ -8,7 +8,10 @@ import TeamStats from '../Pages/TeamStats/TeamStats';
 import IndividualStats from '../Pages/IndividualStats/IndividualStats';
 import Charting from '../Pages/Charting/Charting';
 
+
 function App() {
+
+
   return (
     <div className="App">
       <Navbar/>
