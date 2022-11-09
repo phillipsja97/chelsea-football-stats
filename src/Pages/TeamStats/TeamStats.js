@@ -1,20 +1,16 @@
-import { useEffect, useState } from 'react';
-import teamData from '../../Data/teamStats.Data'
-import TeamCard from '../../Components/TeamCard/TeamCard.js';
-import './TeamStats.css'
+import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router';
 
 export default function TeamStats() {
-    const [allteams, setAllTeams] = useState([]);
+    const navigate = useNavigate();
 
-    useEffect(() => {
-        teamData.getAllTeams()
-          .then((data) => setAllTeams(data))
-          .catch((error) => console.log(error))
-      },[]);
-    
+    const handleClick = () => {
+        navigate('/totalOffense')
+    }
     return (
-        <div>
-        {allteams.map((teams) => <TeamCard teams={teams}/>)}
+        <div className="teamStatsContainer">
+            <h1 className="teamStats">TeamStats</h1>
+            <Button variant="outlined" onClick={handleClick}>Total Offense</Button>
         </div>
     )
 }

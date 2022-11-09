@@ -1,0 +1,22 @@
+.teamStats {
+    color: white
+}
+
+.tableContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.totalOffense {
+    display: block;
+    justify-content: center;
+}
+
+.title {
+    color: white
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: center;
+}
