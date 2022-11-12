@@ -9,7 +9,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import TablePagination from '@mui/material/TablePagination';
-import './TotalOffense.css'
+import './TeamStats.css'
 
 const columns = [
     { id: 'ranking', label: 'Ranking', minWidth: 170 },
@@ -66,7 +66,7 @@ export default function TotalOffense() {
         teamData.getAllTeams()
           .then((data) => setAllTeams(data))
           .catch((error) => console.log(error))
-      },[allteams.id]);
+      },[]);
     
         return (
             <div className="totalOffense">

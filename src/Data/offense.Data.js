@@ -1,8 +1,8 @@
 import axios from 'axios';
 const baseUrl = 'http://localhost:5000';
 
-const getAllTeams = () => new Promise((resolve, reject) => {
-    axios.get(`${baseUrl}/api/teamStats`)
+const getAllOffenseStats = () => new Promise((resolve, reject) => {
+    axios.get(`${baseUrl}/api/offense`)
         .then((response) => {
             resolve(response.data)
         })
@@ -17,4 +17,4 @@ const getByTeamName = (team) => new Promise((resolve, reject) =>  {
         .catch((error) => reject(error))
 });
 
-export default { getAllTeams, getByTeamName };
+export default { getAllOffenseStats, getByTeamName };

@@ -1,3 +1,5 @@
-.teamStats {
-    color: white
+.teamStatsContainer {
+    display: flex;
+    justify-content: center;
+    margin: 1%;
 }
